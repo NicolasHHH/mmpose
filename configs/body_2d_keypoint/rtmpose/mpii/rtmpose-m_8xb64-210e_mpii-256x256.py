@@ -45,6 +45,9 @@ codec = dict(
     normalize=False,
     use_dark=False)
 
+# resume = True
+# load_from = 'work_dirs/... .pth'
+
 # model settings
 model = dict(
     type='TopdownPoseEstimator',
@@ -98,7 +101,7 @@ model = dict(
 # base dataset settings
 dataset_type = 'MpiiDataset'
 data_mode = 'topdown'
-data_root = 'data/mpii/'
+data_root = '/media/user/T7/MPII/'
 
 backend_args = dict(backend='local')
 # backend_args = dict(
@@ -226,3 +229,9 @@ custom_hooks = [
 # evaluators
 val_evaluator = dict(type='MpiiPCKAccuracy')
 test_evaluator = val_evaluator
+
+# runtime visualization settings
+visualizer = dict(vis_backends=[
+    dict(type='LocalVisBackend'),
+    dict(type='TensorboardVisBackend'),
+])

@@ -230,3 +230,9 @@ val_evaluator = dict(
     type='CocoWholeBodyMetric',
     ann_file=data_root + 'annotations/coco_wholebody_val_v1.0.json')
 test_evaluator = val_evaluator
+
+# runtime visualization settings
+visualizer = dict(vis_backends=[
+    dict(type='LocalVisBackend'),
+    dict(type='TensorboardVisBackend'),
+])

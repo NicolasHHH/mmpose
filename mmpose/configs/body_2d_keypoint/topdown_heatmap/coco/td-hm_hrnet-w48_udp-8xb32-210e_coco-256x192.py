@@ -105,7 +105,7 @@ model = dict(
     ))
 
 # base dataset settings
-dataset_type = CocoDataset
+dataset_type = CocoDataset  # 原来是字符串，现在是类。
 data_mode = 'topdown'
 data_root = 'data/coco/'
 
