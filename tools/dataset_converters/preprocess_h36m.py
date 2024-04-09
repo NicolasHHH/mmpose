@@ -412,6 +412,6 @@ if __name__ == '__main__':
         extracted_dir=args.extracted,
         processed_dir=args.processed,
         sample_rate=args.sample_rate)
-    h36m.extract_tgz()
+    # h36m.extract_tgz()
     h36m.generate_cameras_file()
     h36m.generate_annotations()
